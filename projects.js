@@ -1,6 +1,7 @@
-// Builds the "Ongoing projects" cards from projects.xml.
-// fetch() only works over http(s), so preview with Live Server or GitHub Pages.
+// Builds the "Ongoing projects" cards from information saved in the projects.xml.
+// Reference used: https://www.w3schools.com/xml/xml_parser.asp
 
+// This line looks for the div in index.html with the id "project-list"
 const projectList = document.querySelector("#project-list");
 
 // Turns "2026-09" into "September 2026"
@@ -57,6 +58,7 @@ function buildCard(project) {
   return card;
 }
 
+// Also includes handling slash fallback if the XML file can't be loaded or has a formatting error
 fetch("projects.xml")
   .then((response) => {
     if (!response.ok) {
@@ -77,5 +79,5 @@ fetch("projects.xml")
   .catch((error) => {
     console.error(error);
     projectList.innerHTML =
-      '<p>Projects couldn\'t load right now. Visit <a href="https://janisnarvas.com/">janisnarvas.com</a> to see what I\'m working on.</p>';
+      '<p>Projects couldn\'t load right now. Visit <a href="https://janisnarvas.com/">my portfolio site</a> to see what I\'m working on.</p>';
   });
