@@ -6,7 +6,7 @@
 :root {
   --teal: #36a8a8;
   --cyan: #50ebec;
-  --dark: #1f271b;
+  --dark: #1b1e27;
   --beige: #e9e1e1;
   --paper: #faf8f6;
 }
@@ -182,8 +182,8 @@ section {
 footer {
   padding: 2rem 0;
   font-size: 0.875rem;
-  color: var(--beige);
-  background-color: var(--dark);
+  color: var(--dark);
+  background-color: var(--teal);
 }
 
 footer p {
